@@ -10,4 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Add your models below (leave empty for now)
+enum Role {
+  READER
+  MEMBER
+  ELITE
+  GENIUS
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  role      Role     @default(READER)
+  iqScore   Int?
+  badge     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
