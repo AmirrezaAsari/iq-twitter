@@ -1,7 +1,8 @@
-// TODO: align with Prisma User model when schema is defined
-export interface UserEntity {
-  id: string;
-  email: string;
-  username: string;
-  passwordHash?: string;
-}
+import { User } from '@prisma/client';
+
+/**
+ * User without sensitive fields for responses.
+ */
+export type SafeUser = Omit<User, 'password'>;
+
+export type UserWithPassword = User;
