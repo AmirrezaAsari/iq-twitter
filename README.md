@@ -2,17 +2,8 @@
 
 NestJS backend for the social media platform.
 
-## Stack
-
-- **NestJS** 10
-- **PostgreSQL** + **Prisma ORM**
-- **JWT** auth with Passport
-- **bcrypt** for password hashing
-- **class-validator** / **class-transformer** for DTO validation
-- **ConfigModule** with env validation
-
 ## Setup
-
+### Use Docker, or:
 1. Copy `.env.example` to `.env` and set:
    - `DATABASE_URL` – PostgreSQL connection string
    - `JWT_SECRET` – secret for signing JWTs
@@ -36,8 +27,11 @@ npm run prisma:migrate
 npm run start:dev
 ```
 
-Routes except `/auth/register` and `/auth/login` require `Authorization: Bearer <token>`.
+## Stack
 
-## Prisma
-
-Schema is in `prisma/schema.prisma`. Models are left empty; add your models there and run `prisma migrate dev`.
+- **NestJS** 10
+- **PostgreSQL** + **Prisma ORM**
+- **JWT** auth with Passport
+- **bcrypt** for password hashing
+- **class-validator** / **class-transformer** for DTO validation
+- **ConfigModule** with env validation
