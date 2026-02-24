@@ -20,6 +20,7 @@ npm run prisma:migrate
 ```
 
 4. Start the app:
+   <br>
    prod:
 ```bash
 npm run bild
