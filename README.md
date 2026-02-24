@@ -26,6 +26,7 @@ npm run prisma:migrate
 npm run bild
 npm run start
 ```
+   <br>
    dev:
 ```bash
 npm run start:dev
