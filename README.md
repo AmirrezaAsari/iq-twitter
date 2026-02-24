@@ -4,9 +4,7 @@ NestJS backend for the social media platform.
 
 ## Setup
 ### Use Docker, or:
-1. Copy `.env.example` to `.env` and set:
-   - `DATABASE_URL` – PostgreSQL connection string
-   - `JWT_SECRET` – secret for signing JWTs
+1. Copy `.env.example` to `.env` and values
 
 2. Install and generate Prisma client:
 
@@ -22,7 +20,12 @@ npm run prisma:migrate
 ```
 
 4. Start the app:
-
+   prod:
+```bash
+npm run bild
+npm run start
+```
+   dev:
 ```bash
 npm run start:dev
 ```
