@@ -36,29 +36,6 @@ npm run prisma:migrate
 npm run start:dev
 ```
 
-## Project structure
-
-```
-src/
-├── config/           # ConfigModule, env validation, app config
-├── prisma/           # PrismaModule, PrismaService
-├── auth/             # JWT auth, login/register, guards, strategies
-├── users/            # Users module (stub until User model exists)
-├── posts/            # Posts module (stub until Post model exists)
-├── iq/               # IQ module (stub until IQ models exist)
-├── app.module.ts
-└── main.ts           # Global ValidationPipe
-```
-
-## API (after models are added)
-
-- `POST /auth/register` – register (public)
-- `POST /auth/login` – login (public)
-- `GET /users/me` – current user (protected)
-- `GET /posts`, `GET /posts/:id` – list / get post
-- `POST /posts` – create post (protected)
-- `GET /iq/score` – IQ score (protected)
-
 Routes except `/auth/register` and `/auth/login` require `Authorization: Bearer <token>`.
 
 ## Prisma
